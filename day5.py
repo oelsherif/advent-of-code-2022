@@ -21,16 +21,16 @@ for i in range(start, end):
     line = lines[i]
     items = line.split()
     qnt = int(items[1])
-    origin = int(items[3]) - 1
+    source = int(items[3]) - 1
     destination = int(items[5]) - 1
 
     ####part1
     for i in range(qnt):
-        towers1[destination].append(towers1[origin].pop())
+        towers1[destination].append(towers1[source].pop())
 
     ####part2
-    towers2[destination] += towers2[origin][-qnt:]
-    towers2[origin] = towers2[origin][:-qnt]
+    towers2[destination] += towers2[source][-qnt:]
+    towers2[source] = towers2[source][:-qnt]
 ans1 = ''.join([tower[-1] for tower in towers1])
 ans2 = ''.join([tower[-1] for tower in towers2])
 
