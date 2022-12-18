@@ -3,12 +3,10 @@ with open("inputs/17.txt", "r") as File:
 
 def generate_piece(x, y, index):
     temp = [pos[:] for pos in pieces[index]]
-    #temp = pieces[index][:]
     for pos in temp:
         pos[0] += x
         pos[1] += y
     return temp
-#print(line)
 n = len(line) 
 
 pieces = {
@@ -21,7 +19,6 @@ pieces = {
 
 height = {0:0, 1:2, 2:2, 3:3, 4:1}
 
-count = 0
 i_piece = 0
 max_count = 2022
 tower_height = 0
