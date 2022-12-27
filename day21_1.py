@@ -1,4 +1,4 @@
-with open("inputs/test21.txt", "r") as File:
+with open("inputs/21.txt", "r") as File:
     lines = [line.split() for line in File]
 
 def operate(a, symbol, b):
